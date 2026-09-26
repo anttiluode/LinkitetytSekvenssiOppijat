@@ -1,0 +1,19 @@
+{
+  "seed": 113,
+  "arm": "ALONE",
+  "alpha": 0.0,
+  "steps": 2000,
+  "final": {
+    "SELF": 0.47509765625,
+    "PAIR23": 0.7169550657272339,
+    "PAIR01": 0.700921356678009,
+    "NLL": 1.5475528240203857,
+    "IDEAL_SELF": 0.6846354166666667
+  },
+  "own_loss_last100": 1.5490956556797029,
+  "social_loss_last100": null,
+  "seconds": 77.4,
+  "q_react": 0.15,
+  "social_weight": 1.0,
+  "git_sha": "4845a2c74aa98887830e6c5b3ebfb604dc6f0061"
+}
