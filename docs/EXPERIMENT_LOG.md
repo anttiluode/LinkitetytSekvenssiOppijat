@@ -28,3 +28,15 @@ no effect on training).
 
 Runner: `scripts/run_frozen.py`, one process per (seed, arm), two at a time.
 Summary: `scripts/summarize.py` → `results/summary.json`, written before the frozen run.
+
+Result (`results/summary.json`): G0 pass; H1–H5 all fail. Infants raised alone reached 0.774
+self-knowledge against an ideal of 0.785. Mirror arms slightly behind at every checkpoint.
+
+## 5. Post-hoc v0.1 (after the frozen result)
+
+`POSTHOC.md` written and committed (0c1610f) before its code or any run. Code in `lso/social.py`,
+kept separate so v0 stays reproducible. 96 runs: 3 alphas × 8 frozen seeds × 4 arms.
+Result (`results/posthoc_summary.json`): PH1 pass, PH2 fail, PH3 fail, PH4 pass.
+
+Figure fix (presentation only): the v0 panel first used a y-axis starting at 0.72, which made
+differences of 0.005 look large; it now starts at 0.

@@ -46,11 +46,12 @@ cols = ["#1d2f5e", "#e8702a", "#2a6fdb", "#8e5bd8", "#1fa67a"]
 ax.bar(range(5), vals, color=cols)
 ax.axhline(V0["arm_means"]["ALONE"]["IDEAL_SELF"], color="#999", ls="--", lw=1.5)
 for i, v in enumerate(vals):
-    ax.text(i, v + 0.004, f"{v:.3f}", ha="center", fontsize=9)
+    ax.text(i, v - 0.06, f"{v:.3f}", ha="center", fontsize=9, color="white", fontweight="bold")
 ax.set_xticks(range(5), ["alone", "yoked", "faithful", "biased", "co-learning"], fontsize=9)
-ax.set_ylim(0.72, 0.80)
-ax.set_title("Frozen v0: everyone already knows themselves", loc="left", fontsize=12, fontweight="bold")
+ax.set_ylim(0.0, 0.9)
+ax.set_title("Frozen v0: no arm differs", loc="left", fontsize=12, fontweight="bold")
 ax.set_ylabel("Self-knowledge, elder gone")
+ax.text(4.4, V0["arm_means"]["ALONE"]["IDEAL_SELF"] + 0.02, "ideal", color="#666", fontsize=9, ha="right")
 for s in ("top", "right"):
     ax.spines[s].set_visible(False)
 

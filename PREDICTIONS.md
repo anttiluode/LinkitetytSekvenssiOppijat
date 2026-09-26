@@ -91,4 +91,8 @@ self-reading route independently when absent, in which case nothing transfers.
 
 ## Ledger of changes after freezing
 
-(none yet)
+- Cosmetic: the training-loss log now calls `loss.detach()` (removes a warning; training unchanged).
+  Made after the pilot smoke run, before the frozen run.
+- Nothing else in the design, metrics, thresholds or seeds changed.
+- After the frozen result, a separate post-hoc experiment was designed: see `POSTHOC.md`. It does
+  not replace or reinterpret any gate here.
